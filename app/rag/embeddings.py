@@ -6,7 +6,7 @@ class EmbeddingModel:
     Wrapper around sententransformer embeddings
     """
 
-    def __init__(self):
+    def __init__(self, model_name:str):
         self.model=HuggingFaceEmbeddings(
             model_name=model_name
         )
@@ -17,4 +17,3 @@ class EmbeddingModel:
 
     def embed_query(self, query: str):
         return self.model.embed_query(query)
-        
